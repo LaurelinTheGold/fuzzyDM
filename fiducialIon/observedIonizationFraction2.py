@@ -28,6 +28,7 @@ axe = plt.axes()
 axe.grid(True)
 axe.set_xlim(5, 35) #For all data
 axe.set_xlim(5, 20) #For interesting data
+axe.set_xlim(5, 15) #gus suggestion
 # axe.set_xlim(5, 18) #experimental
 axe.set_xlabel(r'$z$')
 axe.set_ylabel(r'$\langle x_{\mathrm{HI}} \rangle$')
@@ -53,7 +54,9 @@ for file in name: #foreach file matching name in directory
 			z.append(float(temp[13:18]))
 			xH.append(float(temp[21:29]))
 		#graphy boi with labels
-		plt.plot(z, xH, label=(dm+": "+r"$T_{\mathrm{vir}} = 2 \times 10^4$ K"+", $\zeta = 20$"), marker='o', markersize=4, linestyle='none')
+		# plt.plot(z, xH, label=(dm+": "+r"$T_{\mathrm{vir}} = 2 \times 10^4$ K"+", $\zeta = 20$"), marker='o', markersize=4, linestyle='none')
+		# plt.plot(z, xH, label=(dm), marker=('o' if dm=='CDM' else 's'), markersize=4, linestyle='solid')
+		plt.plot(z, xH, label=(dm), marker='None', markersize=4, linestyle='solid')
 	if (parsedFileName[1] == "observed.txt"): #fixed points from papers
 		fileData = open(file, 'r')
 		colorMap = {}
@@ -81,4 +84,4 @@ handles, labels = plt.gca().get_legend_handles_labels()
 by_label = dict(zip(labels, handles))
 plt.legend(by_label.values(), by_label.keys(), loc=4) #taken from stackoverflow, removes duplicate labels
 # plt.show()
-plt.savefig("/Users/richardchen/Desktop/summerResearch/2020summer/fiducialIon/completeIon5.pdf") #save
+plt.savefig("/Users/richardchen/Desktop/summerResearch/2020summer/fiducialIon/completeIon6.pdf") #save
