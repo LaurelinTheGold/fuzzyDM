@@ -37,5 +37,6 @@ int main()
 	fclose(fptr);
 	return 0;
 }
+// clang -Wall -g -o misc_count_GT0 misc_count_GT0.c
 // Count = 113859
 // 0.006787
