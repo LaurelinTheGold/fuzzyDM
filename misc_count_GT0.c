@@ -37,3 +37,5 @@ int main()
 	fclose(fptr);
 	return 0;
 }
+// Count = 113859
+// 0.006787
