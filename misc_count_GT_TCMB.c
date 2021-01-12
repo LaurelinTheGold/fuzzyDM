@@ -32,7 +32,7 @@ int main()
 			{
 				if (fread(&bufferC, sizeof(float), 1, fptrC) == 1) // cdm
 				{
-					if (bufferC > tcmb)
+					if (bufferC >= tcmb)
 					{
 						countC++;
 					}
@@ -43,7 +43,7 @@ int main()
 				}
 				if (fread(&bufferF, sizeof(float), 1, fptrF) == 1) // fdm
 				{
-					if (bufferF > tcmb)
+					if (bufferF >= tcmb)
 					{
 						countF++;
 					}
@@ -67,3 +67,4 @@ int main()
 
 // clang -Wall -g -o misc_count_GT_TCMB misc_count_GT_TCMB.c
 // CountC = 7010642, CountF = 198873
+// %CDM = 0.417867, %FDM = 0.011854
