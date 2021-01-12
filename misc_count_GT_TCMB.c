@@ -68,3 +68,5 @@ int main()
 // clang -Wall -g -o misc_count_GT_TCMB misc_count_GT_TCMB.c
 // CountC = 7010642, CountF = 198873
 // %CDM = 0.417867, %FDM = 0.011854
+// CountC = 7010644, CountF = 198873
+// %CDM = 0.417867, %FDM = 0.011854
